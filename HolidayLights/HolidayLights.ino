@@ -4,23 +4,19 @@ int readValue;
 int brightness;
 
 void setup() {
-
   for (auto start = LEDs.begin(); start <= LEDs.end(); start++)
     pinMode(*start, OUTPUT);
     
   pinMode(BUTTON, INPUT); 
-
 }
 
 void loop() {
-
   readValue = analogRead(A0);
   brightness = readValue / 4;
 
   switchLights(Mode::ON, brightness);
 
   if (digitalRead(BUTTON) == HIGH) {
-    
     switchLights(Mode::OFF);
     delay(ONE_SECOND);
 
@@ -46,7 +42,6 @@ void loop() {
       delay(QUARTER_SECOND);
     }
   }
-
 }
 
 
