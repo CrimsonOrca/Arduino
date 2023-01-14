@@ -4,7 +4,7 @@ int readValue;
 int brightness;
 
 void setup() {
-  for (auto iterator = LEDs.begin(); iterator <= LEDs.end(); iterator++) {
+  for (auto iterator = LEDs.begin(); iterator <= LEDs.end(); iterator += 1) {
     pinMode(*iterator, OUTPUT);
   }
   pinMode(BUTTON, INPUT); 
@@ -21,14 +21,14 @@ void loop() {
     delay(ONE_SECOND);
 
     // begin light show...
-    for (auto iterator = LEDs.begin(); iterator <= LEDs.end(); iterator++) {
+    for (auto iterator = LEDs.begin(); iterator <= LEDs.end(); iterator += 1) {
         analogWrite(*iterator, brightness);
         delay(QUARTER_SECOND);
     }
     switchLights(Mode::OFF);
     delay(ONE_SECOND);
  
-    for (auto iterator = LEDs.end(); iterator >= LEDs.begin(); iterator--) {
+    for (auto iterator = LEDs.end(); iterator >= LEDs.begin(); iterator -= 1) {
       analogWrite(*iterator, brightness);
       delay(QUARTER_SECOND);
     }
