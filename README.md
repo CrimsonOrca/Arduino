@@ -1,2 +1,2 @@
 # Arduino
-Collection of small-, and medium-scale Arduino projects.
+Collection of small- and medium-scale Arduino projects.
