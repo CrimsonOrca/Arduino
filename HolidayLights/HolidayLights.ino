@@ -4,9 +4,7 @@ int readValue;
 int brightness;
 
 void setup() {
-  constexpr auto start = LEDs.begin();
-  constexpr auto finish = LEDs.end() + 1;
-  for (auto iterator = start; iterator != finish; iterator++) {
+  for (auto iterator = LEDs.begin(); iterator != LEDs.end() + 1; iterator++) {
     pinMode(*iterator, OUTPUT);
   }
   pinMode(BUTTON, INPUT); 
