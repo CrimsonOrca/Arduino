@@ -1,3 +1,6 @@
+The potentiometer acts as a brightness controller (turning the white knob clockwise/counter-clockwise will lower/raise brightness). And, pressing the push button
+will start a light color show (i.e., holiday lights). 
+
 Here's the circuit diagram:
 <p align="center">
   <img width="750" height="500" src="https://github.com/CrimsonOrca/Arduino/blob/main/HolidayLights/Diagrams/Diagram.png">
